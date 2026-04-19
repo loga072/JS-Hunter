@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Hunter · Cyber Security Tool</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+</head>
+<body>
+    <div class="matrix-bg"></div>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <i class="fas fa-shield-haltered"></i>
+                <h1>JS<span>Hunter</span></h1>
+                <div class="status-led"></div>
+            </div>
+            <p class="subtitle">
+                <i class="fas fa-terminal"></i> Domain recon · Extract all JavaScript assets
+            </p>
+
+            <form id="domainForm" class="search-form">
+                <div class="input-group">
+                    <i class="fas fa-globe input-icon"></i>
+                    <input type="text" id="domainInput" placeholder="target.domain.com" required>
+                    <button type="submit">
+                        <i class="fas fa-skull"></i> SCAN
+                    </button>
+                </div>
+            </form>
+
+            <div id="loading" class="loading">
+                <div class="hex-loader"></div>
+                <p>Scanning for JS files...</p>
+            </div>
+
+            <div id="error" class="error">
+                <i class="fas fa-bug"></i>
+                <span></span>
+            </div>
+
+            <div id="results" class="results">
+                <div class="results-header">
+                    <h2><i class="fas fa-file-code"></i> Discovered <span id="count">0</span> script(s)</h2>
+                    <button id="copyBtn" class="copy-btn">
+                        <i class="fas fa-copy"></i> Copy all
+                    </button>
+                </div>
+                <ul id="jsList" class="js-list"></ul>
+            </div>
+        </div>
+        <div class="footer">
+            <p><i class="fas fa-lock"></i> Ethical use only · JS recon tool</p>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
